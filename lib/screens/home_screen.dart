@@ -1,3 +1,5 @@
+import "package:educationapp/DartPractice/DartPractice.dart";
+import "package:educationapp/FlutterPractice/FlutterPractice.dart";
 import "package:educationapp/screens/course_screen.dart";
 import "package:flutter/material.dart";
 
@@ -30,7 +32,7 @@ class HomePage extends StatelessWidget {
     Icon(Icons.emoji_events, color: Colors.white, size: 30),
   ];
 
-  List imgList = ["Flutter", "React Native", "Python", "C#"];
+  List imgList = ["Dart", "Flutter", "React Native", "Python", "C#"];
 
   @override
   Widget build(BuildContext context) {
@@ -216,6 +218,62 @@ class HomePage extends StatelessWidget {
                     );
                   },
                 ),
+                // =========== Dart Practice start ============
+                SizedBox(height: 10),
+                Material(
+                  color: Color.fromARGB(255, 4, 172, 55),
+                  borderRadius: BorderRadius.circular(10),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DartPractice(),
+                          ));
+                    },
+                    child: Container(
+                      padding:
+                          EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                      child: Text(
+                        "Get Start Dart Practice",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: 1),
+                      ),
+                    ),
+                  ),
+                ),
+                // =========== Dart Practice end ============
+                // =========== Flutter Practice start ============
+                SizedBox(height: 10),
+                Material(
+                  color: Color(0xFF674AEF),
+                  borderRadius: BorderRadius.circular(10),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => FlutterPractice(),
+                          ));
+                    },
+                    child: Container(
+                      padding:
+                          EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                      child: Text(
+                        "Get Start Flutter Practice",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: 1),
+                      ),
+                    ),
+                  ),
+                ),
+                // =========== Flutter Practice end ============
               ])),
         ],
       ),
