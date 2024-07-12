@@ -22,7 +22,7 @@ void DartDataType() {
   var b = 456; // number
   var c = 456.54; // double
   var d = false; // bool
-  // a = 564;
+  // a = 564; // এখানে string টাইপের ডাটা দিতে হবে,
 
   // dynamic এর বিতরে যে কোন টাইপের ডাটা স্টোর করা যাবে
   // dynamic এর প্রথমে যে টাইপের ডাটা থাকবে পরে অন্য টাইপের ডাটা থাকতে পারবে।
@@ -39,7 +39,22 @@ void DartDataType() {
     "Rool": 123,
     "Marraid": true,
   };
-  print(data.)
-  // video https://www.youtube.com/watch?v=cgbc6lLyj1Y&list=PLCOn3Sp262YPqqMoB97CQtzbc8jOIMSW0&index=3
-  40:21
+  data["PhonNumber"] = 01934544352; // Map এ key value যোগ করা।
+  data["Name"] = "New Name"; // Map এর মধ্যে Name এর বিতরে নতুন নাম যোগ হবে।
+  data["Student"] = true;
+  data["Address"] = "Shahapur, Chatkhil, Noakhali";
+  // Map এ key value যোগ করা। key এবং value তে যে কোন ধরনের ডাটা(string, number, bool) যোগ করা যাবে।
+  data.remove("Name"); // Map এর Name নামের key এবং value ডিলেট হয়ে যাবে।
+  data.removeWhere((key, value) => value == "Rasel Hossain Adib");
+  // data.removeWhere এ যেখানে যেখানে value তে "Rasel Hossain Adib" আছে সব গুলো ডিলেট হয়ে যাবে
+  var result = data.containsValue("Rasel Hossain Adib"); // চ্যাক করবে এই নামের কিছু আছে কি না, থাকলে true না থাকলে false আসবে।
+  print(data.keys); // Map এর কি গুলো দেখা যাবে, যেমন- Name, Rool, Marraid
+  print(data.values); // Map এর ভ্যালু গুলো দেখা যাবে, যেমন- Rasel Hossain Adib, 123, true
+
+  Map<String, int> dataTwo = {
+    // Map এর বিতরের ডাটা কোন টাইপের হবে-বলে দেওয়া।
+    "Name": 123,
+    "Rool": 123,
+    "Marraid": 123,
+  };
 }
