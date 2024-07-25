@@ -30,7 +30,10 @@ class WelcomeScreen extends StatelessWidget {
                   child: Center(
                       child: Image.asset(
                     "images/books.png",
-                    scale: 0.8,
+                    width: MediaQuery.of(context).size.width,
+                    height: MediaQuery.of(context).size.height,
+                    
+                    // scale: 0.8,
                   )),
                 )
               ],
@@ -66,15 +69,29 @@ class WelcomeScreen extends StatelessWidget {
                             wordSpacing: 1),
                       ),
                       SizedBox(height: 25),
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 40),
-                        child: Text(
-                          "Learing with plasure with Dear Programmer, Wherebare you are. ",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              fontSize: 17,
-                              color: Colors.black.withOpacity(0.6)),
-                        ),
+                      Column(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(left: 40, right: 40, top: 20),
+                            child: Text(
+                              "Learing with plasure with Dear Programmer, Wherebare you are. ",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontSize: 17,
+                                  color: Colors.black.withOpacity(0.6)),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 40),
+                            child: Text(
+                              "All Copyright 2024@ Rasel Hossain Adib",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontSize: 17,
+                                  color: Colors.black.withOpacity(0.6)),
+                            ),
+                          ),
+                        ],
                       ),
                       SizedBox(height: 60),
                       Material(
