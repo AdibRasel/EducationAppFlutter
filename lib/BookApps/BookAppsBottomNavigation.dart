@@ -31,6 +31,9 @@ class _BookAppsBottomNavigationState extends State<BookAppsBottomNavigation> {
 
       // drawer start. drawer হচ্ছে সাইড মেনু।
       drawer: Drawer(
+        shape:RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10) // Drawer border radius 
+        ),
         child: Column(children: [
           // drawer top image start
           Container(
